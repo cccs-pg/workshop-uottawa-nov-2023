@@ -1,0 +1,6 @@
+# ignore all files starting with . or ~ except .gitignore
+.*
+~*
+!.gitignore
+!.gitattributes
+udemyvenv/
