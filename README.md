@@ -1,13 +1,36 @@
 # workshop-uottawa-nov-2023
 Repository of the Notebooks presented during the uOttawa workshop in November 2023
 
-## Setup instructions
-### Create a .env file with your OPENAI API KEY
+## Setup instructions for OpenAI
+### Create an OpenAI account
+* Visit https://openai.com/
+* Click **Log in** 
+* Choose **Sign up** and follow the instructions.
+
+### Generate an OpenAI API key
+* Go to https://platform.openai.com/api-keys and generate a new API key
+
+### Create a .env file with your OpenAI API key
 ```
 OPENAI_API_KEY=<enter your api key here>
 ```
 
-### Install and start Jupyter Lab
+## [Optional] Setup for CCCS tools (AssemblyLine and BeAVER)
+### Request a My Cyber Portal account
+* Go to [My Cyber Portal](https://portal-portail.cyber.gc.ca/en/)
+* Click on **Sign in** (top right corner).
+* Choose **Sign up now** and follow the instructions to request access to AssemblyLine and BeAVER.
+
+### Generate API keys for both tools
+Once you have received your Cyber Portal account, generate an API key in each tool. 
+
+### Add your API keys to your .env file
+```
+AL_API_KEY=<enter your AssemblyLine api key here>
+AL_USER=<enter your AssemblyLine user id>
+BEAVER_API_KEY=<enter your BeAVER api key here>
+```
+## Install and start Jupyter Lab
 ```bash
 pip install jupyterlab
 jupyter lab
