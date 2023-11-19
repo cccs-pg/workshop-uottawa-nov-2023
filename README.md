@@ -1,5 +1,5 @@
 # workshop-uottawa-nov-2023
-Repository of the Notebooks presented during the uOttawa workshop in November 2023
+Repository of Jupyter notebooks prepared for the uOttawa workshop in November 2023
 
 ## Setup instructions for OpenAI
 ### Create an OpenAI account
@@ -30,7 +30,8 @@ AL_API_KEY=<enter your AssemblyLine api key here>
 AL_USER=<enter your AssemblyLine user id>
 BEAVER_API_KEY=<enter your BeAVER api key here>
 ```
-## Install and start Jupyter Lab
+## Install and start JupyterLab
+JupyterLab is a web-based user interface to edit and execute Jupyter notebooks
 ```bash
 pip install jupyterlab
 jupyter lab
