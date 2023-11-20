@@ -52,12 +52,12 @@ def chatbot():
         Tool(
             name = "GetAntivirusServiceResultsFromAssemblyLine",
             func=get_antivirus_service_results_from_al,
-            description="useful for when you need to answer questions about AssemblyLine antivirus report for a given sha256"
+            description="useful for when you need to answer questions about AssemblyLine's antivirus reports for a given sha256.  AssemblyLine is a CCCS tool available at: https://malware.cyber.gc.ca"
         ),
         Tool(
             name = "GetAntivirusServiceResultsFromBeaver",
             func=get_antivirus_service_results_from_beaver,
-            description="useful for when you need to answer questions about Beaver antivirus report for a given sha256"
+            description="useful for when you need to answer questions about Beaver's antivirus reports for a given sha256.  Beaver is a CCCS tool available at https://beaver.ops.cyber.gc.ca"
         )
 ]
     mrkl = initialize_agent(tools, llm, agent=AgentType.OPENAI_FUNCTIONS, verbose=False, debug=False)
@@ -83,5 +83,6 @@ def chatbot():
         print(f"Bot: {response}")
 
 if __name__ == "__main__":
-  print("Start chatting with the bot (type 'quit' to stop)!")
-  chatbot()
+    print("Start chatting with the bot (type 'quit' to stop)!")
+    print("Please note that this bot doesn't recall previous questions or answers.")
+    chatbot()
