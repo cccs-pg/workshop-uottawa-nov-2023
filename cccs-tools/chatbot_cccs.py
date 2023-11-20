@@ -10,7 +10,7 @@ from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
 from langchain.chat_models import ChatOpenAI
 
-load_dotenv()
+load_dotenv('../.env')
 
 AL_API_KEY = os.getenv('AL_API_KEY')
 AL_USER = os.getenv('AL_USER')
