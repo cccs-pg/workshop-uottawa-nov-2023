@@ -15,6 +15,21 @@ Repository of Jupyter notebooks prepared for the uOttawa workshop in November 20
 OPENAI_API_KEY=<enter your api key here>
 ```
 
+### Create and activate a Python venv
+To learn about venv, visit: https://docs.python.org/3/library/venv.html
+```bash
+python -m venv <path_to_new_virtual_environment>
+source <path_to_new_virtual_environment>/bin/activate
+```
+
+### Install and start JupyterLab
+JupyterLab is a web-based user interface to edit and execute Jupyter notebooks
+```bash
+pip install python-dotenv openai langchain assemblyline_client 
+pip install jupyterlab
+jupyter lab
+```
+
 ## [Optional] Setup for CCCS tools (AssemblyLine and BeAVER)
 ### Request a My Cyber Portal account
 * Go to [My Cyber Portal](https://portal-portail.cyber.gc.ca/en/)
@@ -29,19 +44,4 @@ Once you have received your Cyber Portal account, generate an API key in each to
 AL_API_KEY=<enter your AssemblyLine api key here>
 AL_USER=<enter your AssemblyLine user id>
 BEAVER_API_KEY=<enter your BeAVER api key here>
-```
-
-## Create and activate a Python venv
-To learn about venv, visit: https://docs.python.org/3/library/venv.html
-```bash
-python -m venv <path_to_new_virtual_environment>
-source <path_to_new_virtual_environment>/bin/activate
-```
-
-## Install and start JupyterLab
-JupyterLab is a web-based user interface to edit and execute Jupyter notebooks
-```bash
-pip install python-dotenv openai langchain assemblyline_client 
-pip install jupyterlab
-jupyter lab
 ```
