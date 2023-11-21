@@ -23,7 +23,7 @@ source <path_to_new_virtual_environment>/bin/activate
 ```
 
 ### Install and start JupyterLab
-JupyterLab is a web-based user interface to edit and execute Jupyter notebooks
+[JupyterLab](https://jupyter.org/) is a web-based user interface to edit and execute Jupyter notebooks
 ```bash
 pip install python-dotenv openai langchain assemblyline_client 
 pip install jupyterlab
