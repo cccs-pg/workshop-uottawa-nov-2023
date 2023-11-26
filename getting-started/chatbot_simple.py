@@ -28,13 +28,13 @@ def chatbot():
     messages.append({"role": "user", "content": message})
 
     # Request gpt-3.5-turbo for chat completion
-    response = openai.ChatCompletion.create(
-      model="gpt-3.5-turbo",
+    response = openai.chat.completions.create(
+      model="gpt-3.5-turbo-1106",
       messages=messages
     )
 
     # Print the response and add it to the messages list
-    chat_message = response['choices'][0]['message']['content']
+    chat_message = response.choices[0].message.content
     print(f"Bot: {chat_message}")
     messages.append({"role": "assistant", "content": chat_message})
 
