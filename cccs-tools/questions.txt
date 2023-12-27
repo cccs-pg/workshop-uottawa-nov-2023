@@ -1,6 +1,7 @@
-what is a sha256?
-how to calculate the sha256 of a file on Windows and on Linux?
-what are 2 tools that CCCS has to query for antivirus reports?
 how can I access AssemblyLine and Beaver?
+how can I get malware information about a file?
+what is the sha256 of mydoc.docx?
+is this file malicious, according to AssemblyLine?
+could you please submit this file to assemblyline?
 what do you know about file associated to sha256 af42459d9989ef3ff60d43e8069b647bfa2307e847452d2848dcc6f970984104?
 is the following file malicious: ca6a054154acb559a495cfea1923933a65c94a325834a3cf9f46d85d3adaacf5? 
