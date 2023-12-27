@@ -3,6 +3,7 @@ import os
 import requests
 import json
 import hashlib
+import traceback 
 
 from langchain.agents import initialize_agent, Tool
 from langchain.agents import AgentType
@@ -40,7 +41,7 @@ def get_antivirus_service_results_from_al(sha256):
     if len(search_result['items']) > 0:
         return json.dumps([i['title_text'] for i in search_result['items'][0]['result']['sections']])
     else:
-        return "AssemblyLine has not analyzed this file"
+        return "AssemblyLine has not analyzed this file or there is no antivirus report available"
 
 def get_antivirus_service_results_from_beaver(sha256):
     response = beaver_search(sha256)
@@ -48,7 +49,7 @@ def get_antivirus_service_results_from_beaver(sha256):
         json_data = json.loads(response.text)
         if "SHADOW_SERVER" in json_data['malwareReport']['reports']:
             return json.dumps(json_data['malwareReport']['reports']['SHADOW_SERVER'][0]['results'])
-    return "Beaver has not analyzed this file"
+    return "Beaver has not analyzed this file or there is no antivirus report available"
 
 def calculateFileSha256(filename):
     with open(filename,"rb") as f:
@@ -104,11 +105,15 @@ def chatbot():
         # Exit program if user inputs "quit"
         if message.lower() == "quit":
           break
-    
-        response = agent_chain.run(message)
-        
-        # Print the response 
-        print(f"Bot: {response}")
+
+        try:
+            response = agent_chain.run(message)
+        except:
+            # printing stack trace 
+            traceback.print_exc() 
+        else:
+            # Print the response 
+            print(f"Bot: {response}")
 
 if __name__ == "__main__":
     print("Start chatting with the bot (type 'quit' to stop)!")
