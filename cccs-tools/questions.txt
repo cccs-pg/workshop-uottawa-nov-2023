@@ -1,7 +1,9 @@
-how can I access AssemblyLine and Beaver?
+how can I access AssemblyLine?
 how can I get malware information about a file?
+
+what do you know about file associated to sha256 b90a5b9a5ee5305fdb4bbaa5992849e15942037bafe241eb965325e5bd056f49?
+is the following file malicious: b90a5b9a5ee5305fdb4bbaa5992849e15942037bafe241eb965325e5bd056f49? 
+
 what is the sha256 of mydoc.docx?
 is mydoc.docx malicious, according to AssemblyLine?
 could you please submit mydoc.docx to assemblyline?
-what do you know about file associated to sha256 af42459d9989ef3ff60d43e8069b647bfa2307e847452d2848dcc6f970984104?
-is the following file malicious: ca6a054154acb559a495cfea1923933a65c94a325834a3cf9f46d85d3adaacf5? 

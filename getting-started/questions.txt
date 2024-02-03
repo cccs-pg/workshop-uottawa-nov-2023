@@ -1,8 +1,9 @@
-who won the NHL Stanley cup in 1976
-against who
-in how many games
-who scored the winning goal during the final game
-it doesn't sound like you know who, are you guessing that answer
+who scored the winning goal during the final game of the 1976 NHL Stanley Cup final
+are you guessing that answer or do you really have that information
+
 what do you know about the Canadian Centre for Cyber Security?
 what is a sha256?
 how to calculate the sha256 of a file on Mac, Windows and Linux?
+
+what is the sha256 of mydoc.docx?
+what does AssemblyLine know about sha256 b90a5b9a5ee5305fdb4bbaa5992849e15942037bafe241eb965325e5bd056f49
