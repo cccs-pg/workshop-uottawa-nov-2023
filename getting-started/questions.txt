@@ -1,9 +1,10 @@
 who scored the winning goal during the final game of the 1976 NHL Stanley Cup final
-are you guessing that answer or do you really have that information
+who scored the winning goal during the final game of the 1976 NHL Stanley Cup final?  Do not try to guess the response.  If you don't have the information, simply tell me!
 
 what do you know about the Canadian Centre for Cyber Security?
 what is a sha256?
 how to calculate the sha256 of a file on Mac, Windows and Linux?
+how to calculate the sha256 of a file in python?
 
 what is the sha256 of mydoc.docx?
 what does AssemblyLine know about sha256 b90a5b9a5ee5305fdb4bbaa5992849e15942037bafe241eb965325e5bd056f49
