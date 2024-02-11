@@ -7,11 +7,13 @@ import traceback
 
 from langchain.agents import initialize_agent, Tool
 from langchain.agents import AgentType
-from langchain.llms import OpenAI
+from langchain_openai import OpenAI
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
-from langchain.chat_models import ChatOpenAI
+from langchain_openai import ChatOpenAI
 from langchain.memory import ConversationBufferMemory
+from langchain.agents import AgentExecutor, create_openai_functions_agent
+from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 
 load_dotenv('../.env')
 
@@ -91,10 +93,16 @@ def chatbot():
         )
     ]
 
-    memory = ConversationBufferMemory(memory_key="chat_history")
-    llm=ChatOpenAI(model="gpt-3.5-turbo-1106")
-    
-    agent_chain = initialize_agent(tools, llm, agent=AgentType.OPENAI_FUNCTIONS, verbose=True, memory=memory)
+    llm = ChatOpenAI(temperature=0.7, model="gpt-3.5-turbo-0125")
+    prompt = ChatPromptTemplate.from_messages(
+        [
+            ("system", "You are very powerful assistant, but don't know current events.",),
+            ("user", "{input}"),
+            MessagesPlaceholder(variable_name="agent_scratchpad"),
+        ]
+    )
+    agent = create_openai_functions_agent(llm, tools, prompt)
+    agent_executor = AgentExecutor(agent=agent, tools=tools, verbose=True, debug=False)
     
     # Keep repeating the following
     while True:
@@ -107,7 +115,7 @@ def chatbot():
           break
 
         try:
-            response = agent_chain.run(message)
+            response = agent_executor.invoke({"input": message})['output']
         except:
             # printing stack trace 
             traceback.print_exc() 
